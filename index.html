@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Cajero Automatico</title>
+</head>
+<body>
+    <script>
+        //Datos de los usuarios
+        //Primer Usuario
+        let nombre1 = "ivan";
+        let rut1 = "111-1";
+        let clave1 = 1234;
+        let cuenta1 = 1000;
+ 
+          //Segundo Usuario
+        let nombre2 = "gabriel";
+        let rut2 = "222-2";
+        let clave2 = 1234;
+        let cuenta2 = 2000;
+ 
+ 
+          //Tercer Usuario
+        let nombre3 = "iremar";
+        let rut3 = "333-3";
+        let clave3 = 1234;
+        let cuenta3 = 3000;
+ 
+        //Mensaje de bienvenida y solicitar el rut y clave
+        alert('Bienvenidos al Cajero Automatico');
+        let rut = prompt('Ingrese su RUT');
+        let clave = parseInt(prompt('Ingrese clave'));
+       
+        //Variable para almacenar el estado del usuario valido y sus datos
+        let usuarioValido = false;
+        let nombreUsuario = '';
+        let cuentaUsuario = 0;
+       
+ 
+        //Validar los datos del usuario
+        if(rut == rut1 && clave == clave1){
+            usuarioValido = true;
+            nombreUsuario = nombre1;
+            cuentaUsuario = cuenta1;
+            alert('Bienvenido ' + nombreUsuario);
+            menu();
+ 
+        } else if(rut == rut2 && clave == clave2){
+            usuarioValido = true;
+            nombreUsuario = nombre2;
+            cuentaUsuario = cuenta2;
+            alert('Bienvenido ' + nombreUsuario);
+            menu();
+ 
+        } else if(rut == rut3 && clave == clave3){
+            usuarioValido = true;
+            nombreUsuario = nombre3;
+            cuentaUsuario = cuenta3;
+            alert('Bienvenido ' + nombreUsuario);
+            menu();
+ 
+        } else {
+            alert('Usuario incorrecto');
+         }
+ 
+         //Creamos una funcion para ingresar al menu
+         function menu() {
+            let opcion;
+ 
+            do{
+                opcion = parseInt(prompt("Seleccione una opción: \n 1.- Ver Saldo \n 2.- Realizar Giro \n 3.- Realizar Deposito \n 4.- Salir"));
+               
+                switch (opcion) {
+                    case 1:
+                        alert('Su saldo actual es: '+ cuentaUsuario);
+                        break;
+ 
+                    case 2:
+                       
+                        break;
+                    case 3:
+                       
+                        break;
+                   
+                    case 4:
+                       
+                        break;
+               
+                    default:
+                        break;
+                }
+ 
+ 
+            } while (opcion != 4);
+ 
+         }
+       
+       
+    </script>
+ 
+</body>
+</html>
